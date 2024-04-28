@@ -1,0 +1,14 @@
+/*
+@import 'components/code';
+@import 'components/links';*/
+
+@import 'core/variables';
+@import 'core/reset';
+@import 'layout/header';
+@import './layout/page';
+@import './layout/footer';
+
+body {
+     height: 100vh;
+     width: 100vw;
+}

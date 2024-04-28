@@ -1,0 +1,57 @@
+
+header {
+  background-color: #CDCDCD;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.title{
+
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: black;
+
+
+}
+
+.search-section {
+
+  padding-left: 10px;
+  padding-top: 20px;
+  color: grey;
+
+  .input-search {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid green;
+    padding: 5px;
+  }
+
+  .btn_search {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+  }
+
+  .btn_reset {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+}
+
+
+
+
