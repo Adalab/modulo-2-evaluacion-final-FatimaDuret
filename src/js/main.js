@@ -104,7 +104,7 @@ const renderFavDrinks = (favDrinks) => {
       });
 };
 
- 
+
 
 
 const handleSearch = (event) => {
@@ -132,9 +132,10 @@ const handleSearch = (event) => {
     
     
     renderAllDrinks(filteredDrinks);
-};
+}; 
 
  
+
 
 const init = () => {
     const drinksFavLocal = localStorage.getItem('favDrinks');
@@ -162,9 +163,9 @@ const init = () => {
        
         localStorage.removeItem('favDrinks');
     });
-};
+}; 
 
-init();
+init(); 
 
 
 btnSearch.addEventListener('click', handleSearch);
