@@ -3,67 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
+    <title></title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     
-    <link rel="icon" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./assets/main-62015576.css">
+    
+    <link rel="stylesheet" href="./assets/index-2c84dc84.css">
   </head>
-
-  <body>
-    <div class="page">
-      <header class="page__header">
-  <img src="./images/logo-adalab.png" alt="Adalab">
-  <h1>Bienvenidos a Adalab</h1>
+   <body>
+    
+    
+<header class="header">
+  <h1 class="title">BUSCADOR DE CÓCTELES</h1>
+  <form class="search-section">
+    <label for="cocktail-name">Nombre del cóctel:</label>
+    <input type="text" class="input-search js_search" id="cocktail-name" name="cocktail-name" placeholder="Busca aquí tu cóctel" value="">
+    <button type="submit" class="btn_search js_btn-search">Buscar</button>
+    <button type="reset" class="btn_reset js_btn-reset">Reset</button>
+  </form>
 </header>
-
-      <main class="page__main">
-  <h2>Este es el starter kit de Adalab</h2>
-  <p>Lo usamos para aprender:</p>
-  <ul class="main__list">
-    <li>Sass</li>
-    <li>HTML partials</li>
-    <li>Gulp</li>
-    <li>y muchas cosas más</li>
-  </ul>
-  <p>Si quieres saber cúales son las rutas correctas para:</p>
-  <ul class="main__list">
-    <li>
-      una <code class="code">&lt;img /&gt;</code> mira el fichero
-      <code class="code">./src/html/partials/header.html</code>.
-    </li>
-    <li>
-      y para un <code class="code">background-image</code> mira el fichero
-      <code class="code">./src/html/scss/layout/_page.scss</code>.
-    </li>
-  </ul>
-  <p>
-    Si quieres saber cómo usar un partial HTML dentro de otro partial, busca en la carperta
-    <code class="code">./src/html/index.html</code> y
-    <code class="code">./src/html/partials/main.html</code>, y verás cómo estamos creando estos
-    enlaces:
-  </p>
-  <ul class="main__list">
-    <li>
-      <a class="link__adalab" href="https://adalab.es">Adalab</a>
-
-    </li>
-    <li>
-      <a class="{=$aClass}" href="./more-info.html">Más info del starter kit</a>
-
-    </li>
-  </ul>
+    
+<main class="main">
+  <div class="section_one">
+    <section class="fav-cocktails">
+      <h2>Cócteles Favoritos</h2>
+      <ul class="fav-list js_fav-list"></ul>
+    </section>
+  </div>
+  <div class="section_two">
+    <section class="result-cocktails">
+      <h2>Resultados de búsqueda</h2>
+      <ul class="result-list js_result-list"></ul>
+    </section>
+  </div>
 </main>
+    
+<footer>
+    <p>© Todos los derechos reservados</p>
+ </footer>
+    
 
-      <footer class="page__footer">
-  <small>
-    &copy; Todos los derechos reservados
-    <a class="link__adalab" href="https://adalab.es">Adalab</a>
 
-  </small>
-</footer>
-
-    </div>
     <script src="./js/main.js"></script>
-  </body>
+   </body>
+   
 </html>
