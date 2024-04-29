@@ -57,6 +57,7 @@ const addFavorite = (ev) => {
 
 
 
+
 const renderAllDrinks = (array) => {
     let drinksHTML = ''; 
     for (let i = 0; i < array.length; i++) {
