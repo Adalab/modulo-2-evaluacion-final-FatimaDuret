@@ -1,63 +1,88 @@
-.main{
+.main {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px 10px;
+   background-color: bisque;
+   margin-bottom: 60px;
+   height: 100%;
+ 
+   .section_one{
 
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- padding: 20px 10px 20PX 10px;
- height: 65vh;
- background-color: bisque;
-
- .section_one {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-left: 10px;
-    
+    padding: 10px;
 
-    .fav-cocktails{
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top:10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 12px;
-        
-     }
- }
+   }
+   .section_two {
+     display: flex;
+     flex-direction: column;
+     padding: 10px;
+   }
 
- .section_two {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-right: 10px;
-    
-
-    .result-cocktails {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-top: 10px;
-        padding-right: 10px;
-        font-size: 12px;
-     }
-
-     .li_border{
-        border: 1px solid black;
-        border-radius: 10px;
-     }
- }
-
+   .fav-cocktails {
 
    
-}
+    padding-top: 10px;
+    font-size: 12px;
+    
 
-.fav {
+    .fav-list {
+      list-style: none;
+      border: 2px solid black;
+     
 
-   background-color: yellowgreen;
+      @media screen and (min-width: 768px){
 
+        border: 2px solid black;
+        width: 300px; 
+        height: 400px; 
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+      } 
+
+    }
+
+   }
+   .result-cocktails {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding-top: 10px;
+       font-size: 12px;
+       margin-right: 10px;
+
+       
+
+       
+
+       .result-list {
+        list-style: none;
+        ; 
+        border: 5px solid black;
+
+        @media screen and (min-width: 768px){
+
+          width: 300px; 
+        height: 800px; 
+        
+          
+        } 
+       
+        
+       }
+   }
+
+  .fav {
+        background-color: aquamarine;
+       }
+
+  .js_drink-img {
+         width: 100px;
+         height: 100px;
+         margin-right: 10px;
+         
+       }
 }

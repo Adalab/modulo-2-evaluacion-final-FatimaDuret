@@ -4,52 +4,45 @@ header {
   color: #333;
   text-align: center;
   padding: 10px 0;
-}
 
-.title{
-
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 24px;
-  color: black;
-
-
-}
-
-.search-section {
-
-  padding-left: 10px;
-  padding-top: 20px;
-  color: grey;
-
-  .input-search {
-    width: 150px;
-    height: 30px;
-    border-radius: 5px;
-    border: 2px solid green;
-    padding: 5px;
+  .title {
+    padding: 20px 10px;
+    font-size: 24px;
+    color: black;
   }
 
-  .btn_search {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-   
-  }
+  .search-section {
+    padding: 20px 10px;
+    color: grey;
 
-  .btn_reset {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
 
+    .input-search {
+      width: 150px;
+      height: 30px;
+      border-radius: 5px;
+      border: 2px solid green;
+      padding: 5px;
+    }
+
+    .btn_search,
+    .btn_reset {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .btn_reset {
+      background-color: red;
+    }
+  }
 }
 
 
