@@ -92,8 +92,7 @@ const renderFavDrinks = (favDrinks) => {
     ulListFav.innerHTML = favDrinksHTML; 
 };
 
-
-  const getData = (searchTerm) => {
+ const getData = (searchTerm) => {
     fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
     )
