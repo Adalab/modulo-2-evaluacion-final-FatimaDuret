@@ -1,23 +1,22 @@
 .main {
    display: flex;
    justify-content: space-between;
-   padding: 20px 10px;
+   padding: 20px 20px;
    background-color: bisque;
-   margin-bottom: 60px;
    height: 100vh;
  
    .section_one{
 
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
 
    }
 
    .section_two {
      display: flex;
      flex-direction: column;
-     padding: 10px;
+     padding: 5px;
      
    }
 
@@ -106,19 +105,42 @@
    }
 
   .fav {
-        background-color: aquamarine;
-        border: 1px solid black;
-        width: 90px;
-        color: red;
-        height: 150px;
+        
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 60px;
+    color: red;
+    height: 90px;
+
+
+    @media screen and (min-width: 768px){
+
+      background-color: aquamarine;
+      border: 1px solid black;
+      width: 90px;
+      color: red;
+      height: 150px;
+      
+    }
+        
 
         
        }
 
   .js_drink-img {
+
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+    @media screen and (min-width: 768px){
+      
          width: 70px;
          height: 70px;
          margin-right: 10px;
+
+    }
+        
          
        }
 } 
