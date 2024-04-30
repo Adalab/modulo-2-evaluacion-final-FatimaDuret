@@ -1,4 +1,3 @@
-
 'use strict';
 
 const btnSearch = document.querySelector('.js_btn-search');
@@ -55,9 +54,6 @@ const addFavorite = (ev) => {
     localStorage.setItem('favDrinks', JSON.stringify(favDrinks));
 };
 
-
-
-
 const renderAllDrinks = (array) => {
     let drinksHTML = ''; 
     for (let i = 0; i < array.length; i++) {
@@ -82,9 +78,6 @@ const renderAllDrinks = (array) => {
     });
 };
 
-
-
-
 const renderFavDrinks = (favDrinks) => {
     let favDrinksHTML = '';
     for (const drink of favDrinks) {
@@ -99,7 +92,17 @@ const renderFavDrinks = (favDrinks) => {
             favDrinkLi.classList.add('fav');
         }
     });
-};
+}; 
+
+
+const clearAllFavs = document.querySelectorAll('.js_clear-favs');
+clearAllFavs.forEach(button => {
+    button.addEventListener('click', () => {
+        ulListFav.innerHTML = '';
+        favDrinks = [];
+        localStorage.removeItem('favDrinks');
+    });
+});
 
  const getData = (searchTerm) => {
    
@@ -115,7 +118,6 @@ const renderFavDrinks = (favDrinks) => {
       });
       
 };
-
 
 const handleSearch = (event) => {
     event.preventDefault();
@@ -145,7 +147,6 @@ const handleSearch = (event) => {
     renderAllDrinks(filteredDrinks);
 }; 
 
- 
 const init = () => {
     const drinksFavLocal = localStorage.getItem('favDrinks');
     if (drinksFavLocal !== null) {
@@ -186,7 +187,6 @@ const init = () => {
 };
 
 init(); 
-
 
 btnSearch.addEventListener('click', handleSearch);
 
