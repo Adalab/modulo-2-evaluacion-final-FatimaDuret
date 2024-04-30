@@ -93,15 +93,18 @@ const renderFavDrinks = (favDrinks) => {
 };
 
  const getData = (searchTerm) => {
+    console.log(searchTerm);
     fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
     )
       .then((response) => response.json())
       .then((data) => {
         cocktailsData = data.drinks;
+        
         renderAllDrinks(cocktailsData);
         localStorage.setItem('drinks', JSON.stringify(cocktailsData));
       });
+      
 };
 
 
@@ -110,6 +113,7 @@ const renderFavDrinks = (favDrinks) => {
 const handleSearch = (event) => {
     event.preventDefault();
     const valueSearch = inputSearch.value.toLowerCase().trim(); 
+    console.log(inputSearch.value);
     
     let filteredDrinks = [];
     
@@ -149,7 +153,7 @@ const init = () => {
         cocktailsData = JSON.parse(drinksLocal);
         renderAllDrinks(cocktailsData);
     } else {
-        getData();
+        getData('margarita');
     }
 
     
