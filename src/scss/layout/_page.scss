@@ -23,6 +23,7 @@
    .fav-cocktails {
     padding-top: 10px;
     font-size: 12px;
+    overflow: auto;
     h2 {
       
       border: 2px solid black;
@@ -71,6 +72,7 @@
        padding-top: 10px;
        font-size: 12px;
        margin-right: 10px;
+       overflow: auto;
 
        h2{
           /*padding-left: 70px; */
