@@ -92,8 +92,7 @@ const renderFavDrinks = (favDrinks) => {
     ulListFav.innerHTML = favDrinksHTML; 
 };
 
-
-  const getData = (searchTerm) => {
+ const getData = (searchTerm) => {
     fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
     )
@@ -105,7 +104,7 @@ const renderFavDrinks = (favDrinks) => {
       });
 };
 
- 
+
 
 
 const handleSearch = (event) => {
@@ -133,9 +132,10 @@ const handleSearch = (event) => {
     
     
     renderAllDrinks(filteredDrinks);
-};
+}; 
 
  
+
 
 const init = () => {
     const drinksFavLocal = localStorage.getItem('favDrinks');
@@ -163,9 +163,9 @@ const init = () => {
        
         localStorage.removeItem('favDrinks');
     });
-};
+}; 
 
-init();
+init(); 
 
 
 btnSearch.addEventListener('click', handleSearch);
