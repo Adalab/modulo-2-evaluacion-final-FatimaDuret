@@ -84,16 +84,25 @@ const renderAllDrinks = (array) => {
 
 
 
+
 const renderFavDrinks = (favDrinks) => {
     let favDrinksHTML = '';
     for (const drink of favDrinks) {
         favDrinksHTML += renderOneDrink(drink); 
     }
     ulListFav.innerHTML = favDrinksHTML; 
+    
+    
+    favDrinks.forEach((favDrink) => {
+        const favDrinkLi = document.getElementById(favDrink.idDrink);
+        if (favDrinkLi) {
+            favDrinkLi.classList.add('fav');
+        }
+    });
 };
 
  const getData = (searchTerm) => {
-    console.log(searchTerm);
+   
     fetch(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
     )
@@ -108,12 +117,10 @@ const renderFavDrinks = (favDrinks) => {
 };
 
 
-
-
 const handleSearch = (event) => {
     event.preventDefault();
     const valueSearch = inputSearch.value.toLowerCase().trim(); 
-    console.log(inputSearch.value);
+    
     
     let filteredDrinks = [];
     
@@ -139,40 +146,51 @@ const handleSearch = (event) => {
 }; 
 
  
-
-
 const init = () => {
     const drinksFavLocal = localStorage.getItem('favDrinks');
     if (drinksFavLocal !== null) {
         favDrinks = JSON.parse(drinksFavLocal);
         renderFavDrinks(favDrinks); 
+        
+        
+        favDrinks.forEach((favDrink) => {
+            const favDrinkLi = document.getElementById(favDrink.idDrink);
+            if (favDrinkLi) {
+                favDrinkLi.classList.add('fav');
+            }
+        });
     }
 
-    const drinksLocal = localStorage.getItem('drinks');
-    if (drinksLocal !== null) {
+    let drinksLocal = localStorage.getItem('drinks');
+    if (drinksLocal === null || inputSearch.value.trim() === '') {
+        getData('margarita'); 
+    } else {
         cocktailsData = JSON.parse(drinksLocal);
         renderAllDrinks(cocktailsData);
-    } else {
-        getData('margarita');
     }
 
-    
     btnreset.addEventListener('click', () => {
-        
         ulListFav.innerHTML = '';
-        
-        
         favDrinks = [];
-        
-       
         localStorage.removeItem('favDrinks');
+
+       
+        const allDrinksLi = document.querySelectorAll('.js_drinks');
+        allDrinksLi.forEach((li) => {
+            li.classList.remove('fav');
+        });
+
+        
+        getData('margarita');
     });
-}; 
+};
 
 init(); 
 
 
 btnSearch.addEventListener('click', handleSearch);
+
+
 
 
 
