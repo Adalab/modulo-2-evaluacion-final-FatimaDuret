@@ -54,6 +54,12 @@ const addFavorite = (ev) => {
     localStorage.setItem('favDrinks', JSON.stringify(favDrinks));
 };
 
+const log = document.querySelector('.js_btn-log');
+log.addEventListener('click', () => {
+    console.log(`tienes ${favDrinks.length} favoritos`);
+});
+
+
 const renderAllDrinks = (array) => {
     let drinksHTML = ''; 
     for (let i = 0; i < array.length; i++) {
@@ -63,6 +69,7 @@ const renderAllDrinks = (array) => {
         drinksHTML += `<li class="js_drinks ${classCss}" id="${array[i].idDrink}">
                             <h4>${array[i].strDrink}</h4>
                             <img src="${array[i].strDrinkThumb}" alt="${array[i].strDrink}" class="js_drink-img">
+                            <p>Ingredientes: ${array[i].strIngredient1}, ${array[i].strIngredient2}, ${array[i].strIngredient3}</p>
                         </li>`; 
     }
     ulListResults.innerHTML = drinksHTML; 
